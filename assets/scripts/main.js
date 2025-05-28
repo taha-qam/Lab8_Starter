@@ -48,7 +48,7 @@ function initializeServiceWorker() {
 
   if('serviceWorker' in navigator)
   {
-    addEventListener('load', async () => {
+    window.addEventListener('load', async () => {
       try{
         const registration = await navigator.serviceWorker.register('./sw.js');
 
@@ -62,7 +62,7 @@ function initializeServiceWorker() {
   }
   else
   {
-    console.error("Error: Service Worker registration failed");
+    console.warn("Error: Service Workers not supported");
   }
 
   // B2. TODO - Listen for the 'load' event on the window object.
