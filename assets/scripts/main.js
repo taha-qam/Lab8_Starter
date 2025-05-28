@@ -21,8 +21,8 @@ async function init() {
   let recipes;
   try {
     recipes = await getRecipes();
-  } catch (err) {
-    console.error(err);
+  } catch (problem) {
+    console.error(problem);
   }
   // Add each recipe to the <main> element
   addRecipesToDocument(recipes);
